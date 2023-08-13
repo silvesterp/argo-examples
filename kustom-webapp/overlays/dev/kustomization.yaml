@@ -2,8 +2,14 @@ resources:
 - ../../base
 
 patches:
- - replicas.yaml
- - name.yaml
+- path: replicas.yaml
+  target:
+    kind: Deployment
+    name: new-app-name
+- path: name.yaml
+  target:
+    kind: Deployment
+    name: new-app-name
 
 configMapGenerator:
 - name: mykustom-map
