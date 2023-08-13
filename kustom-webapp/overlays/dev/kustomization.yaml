@@ -10,6 +10,8 @@ patches:
   target:
     kind: Deployment
     name: mywebapp
+    namePrefix: mywebapp-
+
     
 configMapGenerator:
 - name: mykustom-map
